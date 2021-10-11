@@ -5,6 +5,8 @@ import {
   PencilIcon,
   VideoCameraIcon,
 } from "@heroicons/react/outline"
+import { USERS } from "../../constants/users"
+import { classNames } from "../../utils/classNames"
 import Button from "../App/Button"
 import IconButton from "../App/IconButton"
 
@@ -41,7 +43,32 @@ export default function Stream() {
             />
           </div>
         </div>
-        <div>People</div>
+        <ul role="list" className="flex items-center justify-evenly py-4">
+          {USERS.map(user => (
+            <li
+              key={user.id}
+              role="listitem"
+              className="flex flex-col items-center space-y-3"
+            >
+              <div className="relative">
+                <img
+                  className={classNames(
+                    "w-16 h-16 rounded-full object-cover",
+                    user.isTalking && "ring ring-offset-2 ring-blue",
+                  )}
+                  src={user.image}
+                  alt={user.name}
+                />
+                {user.isMuted && (
+                  <IconButton className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 p-1 bg-white shadow-sm">
+                    <MicrophoneIcon className="w-4 h-4 text-opacity-75" />
+                  </IconButton>
+                )}
+              </div>
+              <span className="text-sm font-medium">{user.name}</span>
+            </li>
+          ))}
+        </ul>
       </div>
       <div className="py-4 flex items-center justify-between">
         <div className="space-x-2">
