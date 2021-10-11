@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Remove Scrollbar Tracks */
+#teams-sidebar .simplebar-horizontal,
+#teams-sidebar .simplebar-vertical {
+  @apply hidden;
+}
