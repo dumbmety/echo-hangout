@@ -13,7 +13,7 @@ import {
 export default function Navigation() {
   return (
     <SimpleBar className="w-64 h-screen">
-      <div className="flex flex-col bg-white divide-y divide-lightGray">
+      <div className="flex flex-col h-screen bg-white divide-y divide-lightGray">
         {/* Team Name */}
         <header className="p-4 h-14">
           <h2 role="heading" className="text-lg font-bold">

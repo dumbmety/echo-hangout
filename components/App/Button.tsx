@@ -19,6 +19,8 @@ export default function Button(props: Props) {
         "px-3 p-1.5 select-none cursor-pointer focus:outline-none focus:ring",
         "transition duration-150 ease-in-out",
         props.variant === "primary" && "bg-blue text-white rounded-lg",
+        props.variant === "secondary" &&
+          "bg-blue bg-opacity-5 text-blue rounded-lg",
         props.variant === "danger" &&
           "bg-red bg-opacity-10 text-red font-bold rounded-full",
       )}

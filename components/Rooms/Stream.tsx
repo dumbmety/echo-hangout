@@ -16,28 +16,28 @@ export default function Stream() {
       <div className="py-4 flex-1">
         <div className="rounded-lg overflow-hidden space-y-1">
           <img
-            className="w-full h-96"
+            className="w-full h-72 object-cover"
             src="/images/screens/control-center.jpg"
             alt="Live sharing"
           />
           <div className="flex items-center space-x-1">
             <img
-              className="h-32 w-full object-cover"
+              className="h-28 w-full object-cover"
               src="/images/screens/control-center.jpg"
               alt="Live sharing"
             />
             <img
-              className="h-32 w-full object-cover"
+              className="h-28 w-full object-cover"
               src="/images/screens/control-center.jpg"
               alt="Live sharing"
             />
             <img
-              className="h-32 w-full object-cover"
+              className="h-28 w-full object-cover"
               src="/images/screens/control-center.jpg"
               alt="Live sharing"
             />
             <img
-              className="h-32 w-full object-cover"
+              className="h-28 w-full object-cover"
               src="/images/screens/control-center.jpg"
               alt="Live sharing"
             />
@@ -60,7 +60,7 @@ export default function Stream() {
                   alt={user.name}
                 />
                 {user.isMuted && (
-                  <IconButton className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 p-1 bg-white shadow-sm">
+                  <IconButton className="absolute pointer-events-none -bottom-2 left-1/2 transform -translate-x-1/2 p-1 bg-white shadow-sm">
                     <MicrophoneIcon className="w-4 h-4 text-opacity-75" />
                   </IconButton>
                 )}

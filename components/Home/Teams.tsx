@@ -17,14 +17,14 @@ export default function Teams() {
               role="listitem"
               title={name}
               className={classNames(
-                "rounded-full",
+                "rounded-full border bg-white shadow-sm border-lightGray",
                 isActive ? "ring-2 ring-green" : "",
               )}
             >
               <Link href={`/teams/${slug}`}>
                 <a>
                   <img
-                    className="w-8 h-8 mx-auto rounded-full"
+                    className="w-8 h-8 mx-auto object-cover rounded-full transform scale-75"
                     src={`/images/logos/${logo}`}
                     alt={name}
                   />
